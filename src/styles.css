@@ -2,16 +2,17 @@ body {
   font-family: sans-serif;
 }
 
+.img-container {
+  position: absolute;
+  width: 50%;
+  height: auto;
+  overflow: hidden;
+}
+
 .compare-container {
   position: relative;
   width: 100%;
   height: 100%;
-}
-
-.img-container {
-  position: absolute;
-  width: 50%;
-  overflow: hidden;
 }
 
 .comp-img {
