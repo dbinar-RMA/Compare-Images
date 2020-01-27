@@ -123,27 +123,3 @@ function compareImages() {
 
 // call function
 compareImages();
-
-//fetchArticleImages("");
-
-function fetchArticleImages(artID, callback) {
-  //var url = "https://www.meinbezirk.at/" + artID;
-  // curl -X GET "https://www.meinbezirk.at/api/v2/articles/3763848/images" -H  "accept: application/json"
-
-  var url =
-    "https://www.meinbezirk.at/mistelbach/c-lokales/damals-und-heute-lourdes-kapelle-in-wolkersdorf_a3763848";
-
-  var request = new XMLHttpRequest();
-  request.onreadystatechange = function() {
-    if (request.readyState === 4 && request.status === 200) {
-      console.log("fall back!! ", callback);
-      callback(request.responseText);
-    }
-  };
-
-  request.open("GET", "https://www.google.com", true);
-  request.send();
-  console.log("request status: ", request.status);
-  //var imgUrl = "https://www.meinbezirk.at/api/v2/articles/3763848/images";
-  //request.setRequestHeader("Authorization", "Basic " + btoa("dominik.binar@regionalmedien.at:meibez123"));
-}
